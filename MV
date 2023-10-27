@@ -9475,7 +9475,7 @@ for i, v in pairs(game:GetService("ReplicatedStorage").Remotes['CommF_']:InvokeS
 	end
 end
 table.insert(AllSwordInInventroy, GetFightingStyle("Sword"));
-local SwordMulti = Ms:AddDropdown({
+Ms:AddDropdown({
 	Name = "Select Sword",
 	Default = _G.Settings.Mastery["Select Multi Sword"],
 	Options = AllSwordInInventroy,
@@ -9489,12 +9489,12 @@ local SwordMulti = Ms:AddDropdown({
 })
 
 Mf.AddButton({Name = "Refresh",callback = function()
-	SwordMulti.Clear();
+	Dropdown:Set("GayHub")
 	local AllSwordInInventroy = {};
 	for i, v in pairs(game:GetService("ReplicatedStorage").Remotes['CommF_']:InvokeServer("getInventoryWeapons")) do
 		if (type(v) == "table") then
 			if (v.Type == "Sword") then
-				SwordMulti.Add(v.Name);
+				Dropdown:Set(v.Name)
 			end
 		end
 	end
