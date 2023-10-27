@@ -9477,17 +9477,16 @@ end
 table.insert(AllSwordInInventroy, GetFightingStyle("Sword"));
 local SwordMulti = Ms:AddDropdown({
 	Name = "Select Sword",
-	Options  = AllSwordInInventroy,
 	Default = _G.Settings.Mastery["Select Multi Sword"],
+	Options = AllSwordInInventroy,
 	callback = function(value)
 		_G.Settings.Mastery["Select Multi Sword"] = value
 		if value == false then
 			toTarget(game.Players.LocalPlayer.Character.HumanoidRootPart.Position,game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
 		end
 		SaveSettings()
-	end,
+	end   
 })
-
 
 Mf.AddButton({Name = "Refresh",callback = function()
 	SwordMulti.Clear();
