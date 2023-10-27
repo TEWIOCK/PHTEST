@@ -9468,7 +9468,8 @@ for i, v in pairs(game:GetService("ReplicatedStorage").Remotes['CommF_']:InvokeS
 	end
 end
 table.insert(AllSwordInInventroy, GetFightingStyle("Sword"));
-Ms:AddDropdown({
+
+Mf:AddDropdown({
 	Name = "Select Sword",
 	Default = _G.Settings.Mastery["Select Multi Sword"],
 	Options = AllSwordInInventroy,
