@@ -16,13 +16,6 @@ repeat wait() until game:GetService("ReplicatedStorage").Effect.Container
 
 -- [Configs]
 
-_G.SettingsUI = {
-	Configs = {
-		ColorUI = Color3.fromRGB(255, 0, 127),
-		Key = Enum.KeyCode.RightControl
-	}
-}
-
 _G.Settings = {
 
 	Main = {
